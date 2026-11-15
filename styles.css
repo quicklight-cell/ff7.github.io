@@ -1,1 +1,26 @@
 
+/* Border */
+.box {
+  border-style: solid;
+  border-image: url("images/gui/border.png");
+  border-image-slice: 12;
+  border-image-width: 6px;
+  border-image-outset: 3px;
+  border-image-repeat: round;
+  image-rendering: pixelated;
+}
+
+/* Gradient */
+.box {
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(to bottom, #0000B0, #000050);
+}
+.box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, white, transparent);
+  pointer-events: none;
+  z-index: -1;
+}
